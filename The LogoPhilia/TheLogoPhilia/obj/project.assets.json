@@ -2980,11 +2980,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\pro\\The LogoPhilia\\TheLogoPhilia\\The LogoPhilia.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Boss\\The LogoPhilia\\TheLogoPhilia\\The LogoPhilia.csproj",
       "projectName": "The LogoPhilia",
-      "projectPath": "C:\\Users\\user\\Desktop\\pro\\The LogoPhilia\\TheLogoPhilia\\The LogoPhilia.csproj",
+      "projectPath": "C:\\Users\\user\\Boss\\The LogoPhilia\\TheLogoPhilia\\The LogoPhilia.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\pro\\The LogoPhilia\\TheLogoPhilia\\obj\\",
+      "outputPath": "C:\\Users\\user\\Boss\\The LogoPhilia\\TheLogoPhilia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"

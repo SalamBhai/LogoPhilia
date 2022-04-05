@@ -40,7 +40,7 @@ namespace TheLogoPhilia.Controllers
                           {
                               file.CopyTo(fileStream);
                           }
-                          model.UserImage = fullPath;
+                          model.UserImage = userImage;
                      }
                 }
              var response = await  _applicationUserService.CreateApplicationUser(model);
@@ -60,18 +60,7 @@ namespace TheLogoPhilia.Controllers
              }
              return Ok(response);
          }
-        [HttpGet("GetLoggedInApplicationUser")]
-        [Authorize(Roles = "ApplicationUser")]
-         public async Task<IActionResult> GetLoggedInApplicationUser()
-           {
-               var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-               var response = await  _applicationUserService.Get(userId);
-              if (!response.Success)
-               {
-                 return BadRequest(response);
-                }
-             return Ok(response);
-            }
+        
         [HttpGet("GetAllApplicationUsers")]
          public async Task<IActionResult> GetAllApplicationUsers()
          {
@@ -82,6 +71,19 @@ namespace TheLogoPhilia.Controllers
                 }
              return Ok(response);
          }
+          [Authorize]
+        [HttpGet("GetLoggedInApplicationUser")]
+        
+         public async Task<IActionResult> GetLoggedInApplicationUser()
+           {
+               var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+               var response = await  _applicationUserService.Get(userId);
+              if (!response.Success)
+               {
+                 return BadRequest(response);
+                }
+             return Ok(response);
+            }
         [HttpDelete("DeleteApplicationUser/{Id}")]
          public async Task<IActionResult> DeleteApplicationUsers( int Id)
          {
