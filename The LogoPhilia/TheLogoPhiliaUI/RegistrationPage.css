@@ -1,0 +1,148 @@
+    * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: content-box;
+    }
+    
+    body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        background-image: url('/tlimages/greybg.png');
+    }
+    
+    .pageBody {
+        overflow-x: hidden;
+        width: 98vw;
+        min-height: 87vh;
+        overflow-y: hidden;
+    }
+    
+     :root {
+        --alice: aqua;
+    }
+    
+    #appName {
+        position: relative;
+        bottom: -50px;
+        margin-left: 59px;
+        font-family: "Lucida Calligraphy";
+        font-weight: bolder;
+        font-size: 45px;
+        animation-name: movetext;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        color: black;
+    }
+    
+    @keyframes movetext {
+        from {
+            left: -0px;
+        }
+        To {
+            color: blue;
+            font-weight: bolder;
+        }
+    }
+    
+    .registrationForm,.meAlone {
+        border: 2px solid blue;
+        min-height: 50vh;
+        width: 59vw;
+        position: relative;
+        right: -120px;
+        bottom: -120px;
+        padding-left: 91px;
+        border-radius: 7px;
+        padding-top: 6px;
+        justify-self: center;
+    }
+    
+    #registerForm {
+        /* border: 1px solid var(--alice); */
+        min-height: 45vh;
+        width: 65vw;
+        margin-top: 12px;
+        display: flex;
+        flex-direction: row;
+        padding: 17px 18px;
+    }
+    
+    #SignUP {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 35px;
+        position: relative;
+        right: -105px;
+        font-style: italic;
+        animation-name: movetext;
+        animation-duration: 4s;
+        animation-iteration-count: 2;
+        color: dodgerblue;
+    }
+    
+    .inputs {
+        min-height: 29px;
+        width: 221px;
+        padding-left: 7px;
+        font-weight: 1000;
+        font-style: italic;
+        font-family: serif;
+        outline: dodgerblue;
+        font-size: 15px;
+        border-radius: 3px;
+        border-color: blue;
+        margin-bottom: 8px;
+    }
+    
+    .icon {
+        color: dodgerblue;
+        font-size: 23px;
+    }
+    
+    .div1,
+    .div2 {
+        margin-right: 15px;
+    }
+    
+    #submit {
+        position: relative;
+        bottom: -56px;
+        left: -19px;
+        outline: white;
+        border-color: black;
+        color: white;
+        background-color: blue;
+    }
+    
+    #admin {
+        justify-self: end;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: relative;
+        bottom: -50px;
+        right: -670px;
+        font-size: 32px;
+        font-style: italic;
+    }
+    .ll{
+       position: relative;
+       left: -30px;
+       margin-top: 10px;
+     
+    }
+    .meAlone{
+        position:relative ;
+        bottom: -100px;
+    }
+    #submit:hover{
+        background-color: black;
+        color: white;
+        width: 21vw;
+    }
+    .labels:hover{
+       border: 1px solid blanchedalmond;
+       color: cyan;
+    
+    }
+    .inputs:hover{
+        border: 2px solid blue;
+        border-radius: 15px;
+    }

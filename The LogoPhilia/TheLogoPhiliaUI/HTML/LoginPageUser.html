@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/LoginPage.css" type="text/css">
+</head>
+
+<body>
+    <div class="pageBody">
+        <div>
+            <h2 id="appName"> The LogoPhilia</h2>
+        </div>
+        <div class="registrationForm">
+            <h4 id="SignIn"> Sign In </h4>
+            <form action="#" id="loginForm">
+                <div class="formcontents">
+                    <div>
+                        <div>
+                            <label for="username"  class="labels"> Email Address </label>
+                            <input type="text" name="userName" id="UserName" placeholder=" Your UserName" required>
+                        </div>
+                        <div>
+                            <label for="username" class="labels">  Password: </label>
+                            <input type="password" name="password" id="password" placeholder=" Your Password" required>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="username" class="labels">  Confirm Password: </label>
+                            <input type="password" name="confirmPassword" id="conpassword" placeholder=" Confirm Password" required>
+                        </div>
+
+                        <div>
+                            <label for="username"  class="labels"> Email</label>
+                            <input type="text" name="email" id="email" placeholder="Your Email Address">
+                        </div>
+                        <p class="labels" style="position:relative; left:-220px;bottom:-12px">New Here?<a href="/HTML/RegistrationPageUser.html" style="color: black; font-weight:bolder; font-style: italic; font-family: Georgia, 'Times New Roman', Times, serif;"> Click To Register</a></p>
+                    </div>
+                    <input type="submit" value="Sign In" id="Login">
+                    
+                </div>
+            </form>
+            <script src="/Javascript/LoginPage.js">
+            </script>
+</body>
+
+</html>

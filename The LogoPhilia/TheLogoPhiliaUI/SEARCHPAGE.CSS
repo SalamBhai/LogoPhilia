@@ -1,0 +1,729 @@
+                * {
+                    box-sizing: content-box;
+                    padding: 0px;
+                    margin: 0px;
+                }
+                
+                .pageBody {
+                    background-color: darkblue;
+                    height: 100vh;
+                    width: 100vw;
+                    display: grid;
+                    border-radius: 15px;
+                    overflow-x: hidden;
+                    overflow-y: scroll;
+                }
+                
+                .sideBar {
+                    background-color: black;
+                    height: 100vh;
+                    width: 9vw;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: stretch;
+                    top: -14px;
+                    margin-top: 10px;
+                    outline: black;
+                    position: relative;
+                    bottom: 10px;
+                    visibility: hidden;
+                    box-shadow: black;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+                
+                #AppName {
+                    list-style-type: none;
+                    padding-left: 12px;
+                    margin-top: 15px;
+                    padding-top: 10px;
+                }
+                
+                .sideBar ul {
+                    list-style-type: none;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin-left: 10px;
+                }
+                
+                .siitems li {
+                    color: dodgerblue;
+                    font-size: 26px;
+                    margin-bottom: 20px;
+                    margin-top: 20px;
+                    position: relative;
+                    right: 62px;
+                    left: 2px;
+                    justify-content: center;
+                    /* background-color: whitesmoke; */
+                    border-radius: 2px;
+                    padding-left: 20px;
+                    width: 6vw;
+                    height: 8px;
+                    padding-bottom: 19px;
+                    padding-top: 12px;
+                }
+                
+                #home {
+                    flex: 0 0 30%;
+                    bottom: -50px;
+                    margin-bottom: 34px;
+                    top: -6px;
+                    margin-top: 51px;
+                    justify-self: center;
+                }
+                
+                .searchandUser {
+                    justify-self: center;
+                    width: 90vw;
+                    position: relative;
+                    top: -740px;
+                    right: -70px;
+                    margin-left: 10px;
+                    display: flex;
+                    list-style-type: none;
+                    margin-top: 20px;
+                    padding-top: 90px;
+                }
+                
+                #searchBox {
+                    background-color: white;
+                    font-family: "Times New Roman";
+                    width: 600px;
+                    flex: 0 0 40%;
+                    outline: silver;
+                    padding-left: 23px;
+                    border-radius: 17px;
+                    height: 41px;
+                    padding-right: 15px;
+                    color: black;
+                    padding-right: 21px;
+                    font-size: 18px;
+                    position: relative;
+                    right: -61px;
+                    top: -31px;
+                }
+                
+                #searchbtn {
+                    position: relative;
+                    top: -31px;
+                    left: -31px;
+                }
+                
+                #chevprevandnext {
+                    justify-content: space-around;
+                    flex: 0 0 09%;
+                    height: 41px;
+                    width: 3vw;
+                    padding-top: 10px;
+                }
+                
+                #chevprev {
+                    height: 8px;
+                    width: 50px;
+                    margin-top: 12px;
+                    background-color: silver;
+                    border-radius: 10px;
+                    color: red;
+                    padding: 10px 10px;
+                    font-size: 13px;
+                }
+                
+                #chevnext {
+                    height: 8px;
+                    width: 50px;
+                    margin-top: 12px;
+                    background-color: silver;
+                    border-radius: 10px;
+                    margin-left: 15px;
+                    color: red;
+                    padding: 10px 10px;
+                    font-size: 13px;
+                }
+                
+                #userprofile {
+                    height: 38px;
+                    width: 18px;
+                    flex: 0 0 5%;
+                    margin-left: 300px;
+                    position: relative;
+                    right: -21px;
+                    margin-top: 12px;
+                    background-color: blue;
+                    border-radius: 10px;
+                    padding-left: 15px;
+                    left: -20px;
+                    top: -33px;
+                    bottom: 10px;
+                    border: 1px solid silver;
+                }
+                
+                #icon {
+                    position: relative;
+                    color: antiquewhite;
+                    margin-top: 15px;
+                    top: -6px;
+                }
+                
+                .firstConcern {
+                    border: 1px solid silver;
+                    position: relative;
+                    right: -47px;
+                    top: -700px;
+                    min-height: 29vh;
+                    width: 60vw;
+                    justify-self: center;
+                    display: grid;
+                    grid-template-columns: 1fr 3fr;
+                    margin-top: -17px;
+                    margin-right: 331px;
+                    border-radius: 5px;
+                    background-color: whitesmoke;
+                    padding-left: 12px;
+                    visibility: hidden;
+                }
+                
+                #DefinationsContainer {
+                    min-height: 100vh;
+                    width: 58vw;
+                    position: relative;
+                    right: -55px;
+                    top: -680px;
+                    margin-top: 22px;
+                    margin-left: 81px;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 19px;
+                    visibility: hidden;
+                }
+                
+                .wordPron {
+                    list-style-type: none;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-left: -12px;
+                    margin-top: 12px;
+                    position: relative;
+                    left: -25px;
+                }
+                
+                #wordSearched {
+                    font-size: 36px;
+                    font-family: "Lucida Calligraphy";
+                    color: dodgerblue;
+                }
+                
+                #buttonCont {
+                    margin-right: 10px;
+                    padding-left: 10px;
+                    margin-left: -35px;
+                    position: relative;
+                    right: -51px;
+                    margin-top: 13px;
+                }
+                
+                #btn {
+                    outline: none;
+                    color: palevioletred;
+                    height: 4vh;
+                    border-radius: 10px;
+                    width: 200px;
+                }
+                
+                #slsAndoral {
+                    justify-content: space-between;
+                    border: 1px solid silver;
+                    border-radius: 12px;
+                    margin-left: 51px;
+                    margin-top: 19px;
+                    height: 28px;
+                    margin-bottom: 10px;
+                    position: relative;
+                    top: -10px;
+                    bottom: 12px;
+                    font-weight: bolder;
+                    padding-left: 14px;
+                    font: "Lucida Calligraphy";
+                    color: black;
+                    background-color: white;
+                }
+                
+                .region {
+                    font-weight: bold;
+                    font-size: 35px;
+                    font-family: "Times New Roman";
+                }
+                
+                .regionPron {
+                    font-weight: bolder;
+                    font-family: "Lucida Calligraphy";
+                    font-size: 29px;
+                    color: green;
+                }
+                
+                .definationAndAll {
+                    margin-left: 18px;
+                    margin-bottom: 61px;
+                    position: relative;
+                    top: -12px;
+                    padding-bottom: 14px;
+                }
+                
+                .flAnddef {
+                    display: flex;
+                    list-style-type: none;
+                    margin-bottom: 34px;
+                    flex-direction: row;
+                }
+                
+                .headeranduse {
+                    margin-bottom: 15px;
+                    margin-left: 18px;
+                    position: relative;
+                    top: -39px;
+                    justify-content: space-between;
+                }
+                
+                #usage {
+                    margin-left: 18px;
+                    font-weight: bold;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    position: relative;
+                    left: -60px;
+                    top: -20px;
+                    margin-bottom: 52px;
+                    font-size: 15px;
+                    padding-bottom: 13px;
+                    margin-top: 40px;
+                    font-style: italic;
+                }
+                
+                #fl {
+                    position: relative;
+                    font-weight: bolder;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-size: 20px;
+                    margin-right: 15px;
+                }
+                
+                #defi {
+                    font-family: "Times New Roman";
+                    font-weight: bolder;
+                    margin-bottom: 12px;
+                    font-size: 24px;
+                    color: blue;
+                    margin-top: 16px;
+                }
+                
+                #def {
+                    font-family: "Times New Roman";
+                    margin-left: 10px;
+                    margin-bottom: 21px;
+                    font-size: 17px;
+                }
+                
+                #useHead {
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    font-weight: bolder;
+                    position: relative;
+                    left: -12px;
+                    bottom: -12px;
+                    margin-top: 21px;
+                    margin-bottom: 29px;
+                    font-size: 15px;
+                    color: Blue;
+                }
+                
+                #oralRep {
+                    margin-top: 13px;
+                    margin-bottom: 7px;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                
+                #shortdefinition {
+                    margin-bottom: 15px;
+                }
+                
+                .dld {
+                    border-left: 1px solid antiquewhite;
+                    height: 141px;
+                    width: 6vh;
+                    justify-content: space-around;
+                    margin-left: 14px;
+                    padding-top: 13px;
+                    margin-bottom: 14px;
+                    padding-left: 12px;
+                    position: relative;
+                    right: -14px;
+                    top: -6px;
+                    display: flex;
+                    flex-direction: column;
+                    list-style-type: none;
+                }
+                
+                #starCont {
+                    background-color: yellow;
+                    height: 29px;
+                    width: 20px;
+                    padding-right: 6px;
+                    padding-left: 10px;
+                    border-radius: 30px;
+                    margin-right: 14px;
+                }
+                
+                #icon {
+                    color: black;
+                    margin-top: 12px;
+                    outline: whitesmoke;
+                }
+                /* #secondConcern {
+                    background-color: white;
+                    min-height: 65vh;
+                    width: 58vw;
+                    position: relative;
+                    right: -55px;
+                    top: -680px;
+                    border: 1px solid red;
+                    margin-top: 22px;
+                    margin-left: 81px;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 19px;
+                    visibility: hidden;
+                } */
+                
+                .secondConcern {
+                    background-color: white;
+                    height: 65vh;
+                    width: 58vw;
+                    position: relative;
+                    left: -91px;
+                    border: 1px solid silver;
+                    margin-top: 22px;
+                    margin-left: 81px;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 19px;
+                    margin-right: 81px;
+                    font-weight: bold;
+                }
+                
+                .firstItem {
+                    display: flex;
+                    list-style-type: none;
+                    justify-content: space-between;
+                }
+                
+                .initial {
+                    background-color: darkblue;
+                    margin-top: 10px;
+                    margin-right: 12px;
+                    height: 33px;
+                    width: 30px;
+                    border-radius: 20px;
+                    outline: silver;
+                    padding-left: 10px;
+                    padding-top: 8px;
+                }
+                
+                #defcont {
+                    font-weight: bolder;
+                }
+                
+                .init {
+                    color: white;
+                    font-family: "Times New Roman";
+                }
+                
+                .fl2,#fl2{
+                    color: blue;
+                    font-weight: bold;
+                    margin-top: 14px;
+                    font-size: 21px;
+                    position: relative;
+                    left: -124px;
+                    margin-left: 39px;
+                    flex: 0 0 30%;
+                }
+                
+                .wordinsc {
+                    margin-top: 19px;
+                    position: relative;
+                    top: -13px;
+                    left: -180px;
+                    color: blue;
+                    font-family: "Lucida Calligraphy";
+                    font-size: 27px;
+                    margin-left: 12px;
+                    font-weight: bold;
+                }
+                
+                .up {
+                    margin-top: 19px;
+                    margin-right: 21px;
+                    color: blue;
+                    background-color: white;
+                }
+                
+                #up:hover {
+                    cursor: grab;
+                }
+                
+                .meanings {
+                    margin-top: 18px;
+                    margin-left: 15px;
+                }
+                
+                .meaninganduse {
+                    list-style-type: none;
+                    justify-content: space-between;
+                    font-weight: bold;
+                }
+                
+                .meaning {
+                    font-weight: bold;
+                    list-style-type: disc;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    font-size: 16px;
+                    margin-bottom: 8px;
+                }
+                
+                .meaningUsage {
+                    margin-bottom: 6px;
+                }
+                
+                .countAndNext {
+                    display: flex;
+                    justify-content: end;
+                    list-style-type: none;
+                    justify-content: space-between;
+                }
+                
+                #prevandnext {
+                    justify-content: space-between;
+                }
+                
+                #text {
+                    position: relative;
+                    right: -520px;
+                    font-weight: bold;
+                    margin-top: 12px;
+                    bottom: -21px;
+                    margin-right: 21px;
+                    left: -2px;
+                    right: -553px;
+                    color: blue;
+                    font-family: "Lucida Calligraphy";
+                }
+                
+                #chevnex {
+                    height: 8px;
+                    width: 50px;
+                    margin-top: 14px;
+                    background-color: antiquewhite;
+                    border-radius: 10px;
+                    margin-left: 15px;
+                    color: black;
+                    padding: 10px 10px;
+                    font-size: 13px;
+                    margin-right: 15px;
+                    position: relative;
+                    left: -41px;
+                    bottom: -12px;
+                    border: 1px solid black;
+                    margin-left: 30px;
+                    cursor: grab;
+                    padding-bottom: 12px;
+                    outline: darkblue;
+                    font-weight: bolder;
+                }
+                
+                #chevnex:hover {
+                    color: white;
+                    background-color: blue;
+                }
+                
+                #nextIcon:hover {
+                    color: white;
+                    cursor: pointer;
+                }
+                
+                #nextIcon {
+                    font-size: 18px;
+                    position: relative;
+                    top: -6px;
+                    color: black;
+                }
+                
+                #sides {
+                    position: relative;
+                    right: -870px;
+                    top: -1600px;
+                    width: 23vw;
+                    height: 900px;
+                    margin-left: 89px;
+                    padding-top: 12px;
+                    visibility: hidden;
+                }
+                
+                #sec {
+                    position: relative;
+                    bottom: -440px;
+                }
+                
+                #inflectionsAndFirstKnownUse {
+                    height: 85vh;
+                    width: 22.5vw;
+                    border-radius: 19px;
+                    margin-left: 03px;
+                    padding-top: 12px;
+                    background-color: white;
+                    margin-bottom: 12px;
+                }
+                
+                #inflections {
+                    height: 45vh;
+                    background-color: white;
+                    padding-left: 14px;
+                    padding-top: 10px;
+                    border-bottom: 1px solid grey;
+                }
+                
+                #navbar {
+                    font-size: 30px;
+                    font-weight: bold;
+                    position: relative;
+                    top: -20px;
+                    color: white;
+                    border: 1px solid silver;
+                    height: 31px;
+                    width: 40px;
+                    padding-left: 13px;
+                    background-color: blue;
+                    border-radius: 12px;
+                    cursor: pointer;
+                    visibility: hidden;
+                }
+                
+                #The {
+                    user-select: none;
+                    font-family: "Lucida Calligraphy";
+                }
+                
+                #logoph {
+                    user-select: none;
+                }
+                
+                #sidebar {
+                    visibility: hidden;
+                }
+                
+                #headInf {
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    font-weight: bolder;
+                    color: darkblue;
+                    outline: black;
+                    margin-left: 15px;
+                }
+                
+                #firstKnownUse {
+                    margin-top: 12px;
+                    height: 24vh;
+                    padding-left: 19px;
+                    font-weight: bold;
+                }
+                
+                #ety {
+                    background-color: #fff;
+                    border: 1px solid black;
+                    min-height: 45vh;
+                    width: 22vw;
+                    padding-left: 14px;
+                    padding-top: 12px;
+                    margin-right: 39px;
+                    border-radius: 16px;
+                    font-weight: 300;
+                }
+                
+                #head,
+                #firstKnownUseHead,
+                #headInf {
+                    color: darkblue;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    font-weight: bold;
+                    font-size: 22px;
+                    margin-left: 21px;
+                    margin-bottom: 21px;
+                }
+                
+                .Synonyms,
+                .Antonyms {
+                    color: darkblue;
+                    font-family: "Lucida Calligraphy";
+                    font-weight: bolder;
+                    font-style: italic;
+                    font-size: 20px;
+                    margin-top: 13px;
+                }
+                
+                #containerinf {
+                    list-style-type: none;
+                    font-style: italic;
+                    font-weight: bold;
+                    justify-content: space-between;
+                    margin-bottom: 19px;
+                }
+                
+                .synonymsContents,
+                .antonymsContents {
+                    justify-content: space-between;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    cursor: pointer;
+                    color: blue;
+                    list-style-type: none;
+                    font-weight: 500;
+                }
+                
+                .synos {
+                    margin-bottom: 19px;
+                }
+                
+                .infs {
+                    margin-bottom: 12px;
+                }
+                
+                #FirstKnownUseContent {
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    font-style: italic;
+                }
+                
+                #EtymologyContent {
+                    font-weight: bold;
+                }
+                
+                #ant {
+                    font-style: italic;
+                }
+                
+                #Play {
+                    width: 45px;
+                    height: 22px;
+                    outline: blue;
+                    background-color: blue;
+                    margin-top: 12px;
+                    color: white;
+                    font-weight: bolder;
+                    font-style: italic;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    margin-left: 12px;
+                    padding-right: 12px;
+                }
+                
+                ul {
+                    list-style: none;
+                }

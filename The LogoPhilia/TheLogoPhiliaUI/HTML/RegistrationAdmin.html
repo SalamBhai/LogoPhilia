@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Registration</title>
+    <link rel="stylesheet" type="text/css" href="/RegistrationPage.css">
+</head>
+
+<body>
+    <div class="pageBody">
+        <div>
+            <h2 id="appName"> The LogoPhilia</h2>
+        </div>
+        <div>
+            <h3 id="admin"> Administrator</h3>
+        </div>
+        <div class="registrationForm  meAlone" >
+            <h4 id="SignUP"> Register</h4>
+            <form action="#" id="registerForm">
+                <div class=" div1">
+                    <div class="div1items">
+
+                        <span> 
+                          <input type="text" name="firstName" id="firstName"  placeholder="Your First Name"class="inputs" required>
+                        </span>
+                    </div>
+                    <div class="div1items">
+                        <span class="icon"></span>
+                        <span> 
+                          <input type="text" name="lastName" id="lastName"  placeholder="Your Last Name"class="inputs" required>
+                        </span>
+                    </div>
+                    <div class="div1items">
+                        <span class="icon"></span>
+                        <span> 
+                          <input type="email" name="AdministratorEmail" id="email"  placeholder="Email Address" class="inputs" required>
+                        </span>
+                    </div>
+                    <div class="div1items">
+                        <span class="icon"></span>
+                        <span>
+                            <label for="Image" style="font-family: Georgia, 'Times New Roman', Times, serif;font-weight:700; font-style:italic; color:darkblue">Your Image:</label> 
+                             <input type="file" name="userImage" id="photo" placeholder="Your image" class="inputs"required>
+                        </span>
+                    </div>
+                    <div class="div1items ll">
+                        <span class="icon"></span>
+                        <span> 
+                            <label  for="Image" style="font-family: Georgia, 'Times New Roman', Times, serif;font-weight:800; font-style:italic; color:darkblue">Your Gender:</label>
+                          <select  id="Gender" class="inputs" required>
+                            <option value="1" name="gender" id="male"></option>
+                            <option value="2"  name="gender" id="female"></option>
+                          </select>
+                        </span>
+                    </div>
+
+                </div>
+                <div class="div2">
+                    <div class="div2items">
+                        <span class="icon" style="color: blue;"></span>
+                        <span> 
+                            <input type="text" name="userName" id="userName"  placeholder="Your UserName"class="inputs" style="color: blue;"required>
+                        </span>
+                    </div>
+                    <div class="div2items">
+
+                        <span> 
+                          <input type="text" name="country" id="Nationality"  placeholder="Country"class="inputs" required>
+                        </span>
+                    </div>
+                    <div class="div2items">
+
+                        <span> 
+                            <input type="password" name="password" id="password"  placeholder="Your Password"class="inputs" required>
+                        </span>
+                    </div>
+                    <div class="div2items">
+
+                        <span> 
+                            <input type="password" name="conpassword" id="confirmpassword"  placeholder="Confirm Password"class="inputs" style="color: red;" required>
+                        </span>
+                    </div>
+                    <div class="div2items ll">
+                          <label  for="Date Of Birth" style="font-family: Georgia, 'Times New Roman', Times, serif;font-weight:800; font-style:italic; color:darkblue">Your Date Of Birth</label>
+                        <span> 
+                          <input type="datetime-local" name="dateOfBirth" id="dateofbirth"  placeholder=" Your Date Of Birth"class="inputs" required>
+                        </span>
+                    </div>
+                    <div>
+                        <input type="submit" value="Submit" style="background-color:aqua; min-height:40px; color:black;font-weight:bolder;font-size:large" class="inputs" id="submit">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="/Javascript/RegistrationAdmin.js"></script>
+</body>
+
+</html>

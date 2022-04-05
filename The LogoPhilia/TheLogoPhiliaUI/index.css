@@ -1,0 +1,70 @@
+    * {
+        box-sizing: content-box;
+        padding: 0px;
+        margin: 0px;
+        user-select: none;
+    }
+    
+    body {
+        background-color: white;
+    }
+    
+    .landing {
+        background-color: white;
+        height: 96vh;
+        width: 92vw;
+        justify-content: center;
+        overflow-x: hidden;
+    }
+    
+    .frontItems {
+        list-style-type: none;
+        justify-content: center;
+        position: relative;
+        bottom: -290px;
+        right: -250px;
+        font-family: "Lucida Calligraphy";
+        font-weight: bolder;
+        color: blue;
+        animation-delay: 0.4s;
+        font-size: 60px;
+        padding-left: 391px;
+        left: -120px;
+        animation-name: changeColor;
+        animation-duration: 3s;
+    }
+    
+    #app {
+        font-size: 29px;
+        font-style: italic;
+        font-weight: bold;
+        color: black;
+        font-family: serif;
+        justify-content: center;
+        position: relative;
+        bottom: -330px;
+        right: -400px;
+        animation-name: movetext;
+        animation-duration: 3s;
+    }
+    @keyframes changeColor {
+        from {
+            left: -0px;
+        }
+        To {
+            color: blue;
+            font-weight: bolder;
+        }
+    }
+    @keyframes movetext {
+        from {
+            left: -400px;
+        }
+        To {
+            right: -300px;
+        }
+    }
+    
+    #The {
+        margin-bottom: 12px;
+    }

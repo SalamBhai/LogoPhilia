@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=2xlOCALt"></script>
+    <h1> Text To Speech Converter</h1>
+    <textarea name="" id="text" cols="30" rows="10"></textarea>
+    <input type="button" onclick="btnSpeak()" value="Listen">
+    <script>
+        function btnSpeak() {
+            var text = document.getElementById("text").value;
+            console.log(text);
+            responsiveVoice.speak(text);
+        }
+    </script>
+    <!-- <div class="secondConcern" id="secondConcern">
+        <ul class="firstItem">
+            <li id="initial" class="initial">
+                <h3 class="init" id="init">
+                    N
+                </h3>
+            </li>
+            <li id="fl2" class="fl2">
+                Noun
+            </li>
+            <li id="wordinsc" class="wordinsc">
+            </li>
+            <li id="up" title="Click To View Content" class="up">
+                <i class="fas fa-chevron-up"></i>
+            </li>
+        </ul>
+        <div class="meanings">
+            <ul id="meaningandusage" class="meaninganduse"> 
+            </ul>
+            <div id="Syncontainer">
+                <h4 id="Synonyms" class="Synonyms">Synonyms</h4>
+                <ul id="synonymsContents"  class="synonymsContents">
+                </ul>
+           </div>
+            <div id="antonymsCont">
+                <h4 id="Antonyms" class="Antonyms">Antonyms</h4>
+                <ul id="antonymsContents" class="antonymsContents">
+                   <p id="ant"> Visit the  <a href="Thesauruspage.html"> Thesaurus page</a> for antonyms of the word </p>
+                </ul>
+            </div>
+           
+        </div>
+      </div> -->
+</body>
+
+</html>

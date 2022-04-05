@@ -1,0 +1,13 @@
+using System;
+using TheLogoPhilia.Entities;
+
+namespace TheLogoPhilia.Models
+{
+    public class UserRoleViewModel
+    {
+        public int UserId{get;set;}
+        public User User{get;set;}
+        public int RoleId{get;set;}
+        public Role Role{get;set;}
+    }
+}

@@ -1,0 +1,109 @@
+            * {
+                box-sizing: content-box;
+                padding: 0px;
+                margin: 0px;
+            }
+            
+            .searchandUser {
+                justify-self: center;
+                width: 90vw;
+                position: relative;
+                top: -700px;
+                right: -70px;
+                margin-left: 10px;
+                display: flex;
+                list-style-type: none;
+                margin-top: 20px;
+                padding-top: 10px;
+            }
+            
+            .frontItems {
+                list-style-type: none;
+                justify-content: center;
+                position: relative;
+                bottom: -290px;
+                right: -250px;
+                font-family: "Lucida Calligraphy";
+                font-weight: bolder;
+                color: white;
+                animation-delay: 0.4s;
+                font-size: 66px;
+            }
+            
+            body {
+                overflow-y: hidden;
+            }
+            
+            .pageBody {
+                background-color: darkblue;
+                height: 100vh;
+                width: 100vw;
+                display: grid;
+                border-radius: 15px;
+                overflow-x: hidden;
+                overflow-y: scroll;
+            }
+            
+            #userprofile {
+                visibility: hidden;
+            }
+            
+            #searchBox {
+                background-color: white;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                width: 600px;
+                flex: 0 0 40%;
+                outline: silver;
+                padding-left: 23px;
+                border-radius: 17px;
+                height: 41px;
+                padding-right: 15px;
+                border: 1px solid silver;
+                color: black;
+                padding-right: 21px;
+                font-size: 18px;
+                position: relative;
+                top: -31px;
+                right: -61px;
+                margin-bottom: 101px;
+            }
+            
+            #searchbtn {
+                position: relative;
+                top: -31px;
+            }
+            
+            #searchbtn:hover {
+                cursor: grab;
+                color: aqua;
+            }
+            
+            #The {
+                user-select: none;
+                font-family: "Lucida Calligraphy";
+                visibility: visible;
+            }
+            
+            #logoph {
+                user-select: none;
+                visibility: visible;
+            }
+            
+            #navbar {
+                font-size: 30px;
+                font-weight: bold;
+                position: relative;
+                top: -20px;
+                color: white;
+                border: 1px solid silver;
+                height: 31px;
+                width: 40px;
+                padding-left: 13px;
+                background-color: black;
+                border-radius: 12px;
+                cursor: pointer;
+            }
+            
+            #sidebar {
+                visibility: hidden;
+            }

@@ -1,0 +1,133 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: content-box;
+}
+
+body {
+    overflow-x: hidden;
+    background-image: url('/tlimages/greybg.png');
+    overflow-y: hidden;
+}
+
+.pageBody {
+    overflow-x: hidden;
+    width: 98vw;
+    min-height: 87vh;
+}
+
+#loginForm {
+    border: 0.8px solid darkturquoise;
+    min-height: 49vh;
+    background-color: rgb(230, 230, 230);
+    width: 52vw;
+    position: relative;
+    right: -139px;
+    bottom: -120px;
+    padding-left: 91px;
+    border-radius: 7px;
+    padding-top: 29px;
+    padding-left: 19px;
+    justify-self: center;
+}
+
+#appName {
+    position: relative;
+    bottom: -50px;
+    margin-left: 59px;
+    font-family: "Lucida Calligraphy";
+    font-weight: bolder;
+    font-size: 45px;
+    animation-name: movetext;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    color: turquoise;
+    text-shadow: 14px blue;
+}
+
+@keyframes movetext {
+    from {
+        left: -0px;
+    }
+    To {
+        color: darkblue;
+        font-weight: bolder;
+    }
+}
+
+:root {
+    --darkblue: darkblue;
+}
+
+#SignIn {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 39px;
+    justify-self: end;
+    position: relative;
+    right: -259px;
+    bottom: -90px;
+    color: blue;
+}
+
+input {
+    min-height: 34px;
+    width: 249px;
+    padding-left: 17px;
+    font-weight: 600;
+    font-family: serif;
+    outline: dodgerblue;
+    font-size: 15px;
+    border-radius: 3px;
+    border-color: darkcyan;
+    margin-bottom: 8px;
+    margin-left: 12px;
+    margin-top: 12px;
+    font-style: italic;
+}
+
+.labels {
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: dodgerblue;
+    font-style: italic;
+}
+
+#Login {
+    background-color: white;
+    color: darkblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 1000;
+    font-size: 17px;
+    margin-left: 59px;
+    border-color: darkcyan;
+    justify-self: center;
+    position: relative;
+    bottom:-161px;
+    height: 31px;
+    left: -291px;
+    padding-left: 5px;
+    width: 49vw;
+}
+
+.formcontents {
+    margin-left: 41px;
+    display: flex;
+    padding-top: 31px;
+    justify-content: space-between;
+}
+#Login:hover{
+    background-color: black;
+    color: white;
+    width: 21vw;
+}
+.labels:hover{
+   border: 1px solid blanchedalmond;
+   color: blue;
+
+}
+input:hover{
+    border: 2px solid blue;
+    border-radius: 15px;
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="asd">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary Search Page</title>
+
+    <link rel="stylesheet" type="text/css" href="/DictionaryLanding.css" id="dland">
+    <link rel="stylesheet" type="text/css" href="/SEARCHPAGE.CSS" id="dresult">
+    <link rel="stylesheet" type="text/css" href="/fa/css/all.css">
+    <script src="https://kit.fontawesome.com/523d598fb7.js" type="text/javascript" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- <script src="https://code.responsivevoice.org/responsivevoice.js?key=2xlOCALt"></script> -->
+    <div class="pageBody">
+        <div class="landing">
+            <ul class="frontItems" id="fi">
+                <li id="The" title="The"> The </li>
+                <li id="logoph" title="logophilia"> LogoPhilia</li>
+            </ul>
+        </div>
+        <section class="sideBar" id="sidebar">
+
+            <ul class="siitems">
+
+                <a href="/HTML/HomePage.html">
+                    <li id="home" title="Home"><i class="fa-solid fa-house-user"></i></li>
+                </a>
+                <a href="#">
+                    <li id="book" title="Thesaurus">
+                        <i class="fa-solid fa-book"></i>
+                    </li>
+                </a>
+                <a href="#">
+                    <li id="star" title="Favourites"><i class="fa-solid fa-star"></i> </li>
+                </a>
+                <a href="#">
+                    <li id="word" title="More words"><i class="fa-brands fa-wordpress"></i> </li>
+                </a>
+                <a href="#">
+                    <li id="settings" title="Customize page"><i class="fa-solid fa-gear"></i> </li>
+                </a>
+                <a href="#">
+                    <li id="more" title="more features"><i class="fa-solid fa-ellipsis"></i>
+
+                    </li>
+                </a>
+
+
+            </ul>
+        </section>
+        <div>
+            <ul class="searchandUser">
+                <li id="navbar">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </li>
+                <li id="searchCont">
+                    <form id="searchform" action="#">
+                        <input type="text" name="word search" id="searchBox" placeholder="Enter the search text">
+                        <button id="searchbtn" title=" search The word" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form> 
+                </li>
+
+                <li id="userprofile">
+                    <i id="icon" class="fa fa-user" aria-hidden="true"></i>
+                </li>
+            </ul>
+        </div>
+       
+        <div class="firstConcern" id="firstConcern">
+            <div class="wordSection">
+                <h3 id="wordSearched">
+                </h3>
+                <p id="oralRep">
+                    
+                </p>
+              <ul class="wordPron">
+                    <li id="buttonCont">
+                        <audio id="btn" controls="controls">
+                         <source id="src">
+                        </audio>
+                     </li>
+
+                 <input type="text" name="Place"  id="slsAndoral" readonly>
+                 <!-- <input type="button" value="Play" id="Play" onclick="pageSpeak()"> -->
+            </ul>
+        </div>
+        
+        <div class="definationAndAll">
+            <h5 id="defi">
+                Definition
+            </h5>
+            <ul class="flAnddef">
+                <li id="fl">
+                 
+                </li>
+                <li id="defcont">
+                </li>
+            </ul>
+            <div class="headeranduse">
+                <h6 id="useHead">
+                    Use In Sentence
+                </h6>
+                <p id="usage">
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <div id="DefinationsContainer" title="Copy Contents To Listen">
+      <div class="secondConcern" id="secondConcern" >
+        <ul class="firstItem">
+            <li id="initial" class="initial">
+                <h3 class="init" id="init">
+                    N
+                </h3>
+            </li>
+            <li id="fl2" class="fl">
+                Noun
+            </li>
+            <li id="wordinsc" class="wordinsc">
+            </li>
+            <li id="up" title="Click To View Content" class="up">
+                <i class="fas fa-chevron-up"></i>
+            </li>
+        </ul>
+        <div class="meanings">
+            <ul id="meaningandusage" class="meaninganduse"> 
+            </ul>
+            <div id="Syncontainer">
+                <h4 id="Synonyms" class="Synonyms">Synonyms</h4>
+                <ul id="synonymsContents"  class="synonymsContents">
+                </ul>
+           </div>
+            <div id="antonymsCont">
+                <h4 id="Antonyms" class="Antonyms">Antonyms</h4>
+                <ul id="antonymsContents" class="antonymsContents">
+                   <p id="ant"> Visit the  <a href="Thesauruspage.html"> Thesaurus page</a> for antonyms of the word </p>
+                </ul>
+            </div>
+           
+        </div>
+      </div>
+    </div>
+   
+        <div id="sides">
+            <div id="inflectionsAndFirstKnownUse">
+                <div id="inflections">
+                    <h4 id="headInf">
+                        Inflections
+                    </h4>
+                    <ul id="containerinf">
+                       
+                    </ul>
+                </div>
+                <div id="firstKnownUse">
+                    <h4 id="firstKnownUseHead">
+                        First Known Use
+                    </h4>
+                    <p id="FirstKnownUseContent">
+
+                    </p>
+                </div>
+            </div>
+            <div id="ety">
+                <h4 id="head"> Etymology
+                </h4>
+                <p id="EtymologyContent">
+                    
+                </p>
+            </div>
+            <ul class="countAndNext">
+                <li id="text">
+                    4 Of 12 results
+                </li>
+                <li id="prevandnext">
+                    <span>
+                            <button id="chevnex"><i id="nextIcon" class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                        </span>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <script src="/Javascript/Searchpage.js" type="text/javascript"></script>
+
+
+</body>
+
+</html>
