@@ -137,7 +137,7 @@ namespace TheLogoPhilia.Implementations.Services
                    UserRoles = applicationUser.UserRoles.Select( L=> new RoleViewModel
                    {
                       Id = L.Role.Id,
-                      RoleName = L.Role.RoleName,
+                      RoleName = L.Role.RoleName ,
                     }).ToList()
                  }
               };

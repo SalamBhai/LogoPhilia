@@ -3,6 +3,7 @@ var GenderSelect = document.getElementById('Gender');
 var male = document.getElementById('male');
 var female = document.getElementById('female');
 var registerButton = document.getElementById('submit');
+
 console.log(registerForm);
 const host = 'https://localhost:5001';
 fetch(`${host}/api/Enums/GetGenders`)
@@ -35,6 +36,7 @@ fetch(`${host}/api/Enums/GetGenders`)
             }
          })
      }
+ 
 registerForm.addEventListener('submit', function(e) {
     e.preventDefault();
         ValidateInputs();
@@ -48,7 +50,8 @@ registerForm.addEventListener('submit', function(e) {
         alert("Provide a password different from your userName");
     }
 
-    var formData = new FormData(registerForm);
+    let formData = new FormData(registerForm);
+    
 
     console.log('about executing...');
     console.log('fd', formData)
@@ -65,8 +68,8 @@ registerForm.addEventListener('submit', function(e) {
             }
             if (result.data!== null) {
                 console.log(result);
-                alert(`Registration Successful! Your Administrator Code Is ${result.data.fullName}`);
-                location.href = "/HTML/LoginPageAdmin.html";
+                alert(`Registration Successful!  ${result.data.fullName}`);
+                location.href = "/HTML/LoginPageUser.html";
             }
         })
         .catch(function(err) {

@@ -71,7 +71,8 @@ namespace TheLogoPhilia.Controllers
                 }
              return Ok(response);
          }
-          [Authorize]
+        
+        [Authorize(Roles="ApplicationUser")]
         [HttpGet("GetLoggedInApplicationUser")]
         
          public async Task<IActionResult> GetLoggedInApplicationUser()
@@ -85,7 +86,7 @@ namespace TheLogoPhilia.Controllers
              return Ok(response);
             }
         [HttpDelete("DeleteApplicationUser/{Id}")]
-         public async Task<IActionResult> DeleteApplicationUsers( int Id)
+         public async Task<IActionResult> DeleteApplicationUsers(int Id)
          {
                var response = await  _applicationUserService.Delete(Id);
               if (!response)

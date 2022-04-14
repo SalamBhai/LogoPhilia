@@ -1,7 +1,7 @@
 var emailAddress = document.getElementById('email');
 var userName = document.getElementById('UserName');
 var password = document.getElementById('password')
-var conpassword = document.getElementById('conpassword');
+
 var loginForm = document.getElementById('loginForm');
 const host = "https://localhost:5001"
 loginForm.addEventListener('submit', function(e) {
@@ -12,9 +12,7 @@ loginForm.addEventListener('submit', function(e) {
         "userName": userName.value,
         "password": password.value,
     };
-    if (conpassword.value !== password.value) {
-        alert('Passwords Do Not Match');
-    }
+    
     console.log("Processing Request...")
 
     fetch(`${host}/api/User/UserLogin`, {

@@ -33,7 +33,7 @@ namespace TheLogoPhilia.Authentication
            {
                Subject = new ClaimsIdentity(Claims),
                 IssuedAt = System.DateTime.UtcNow,
-                Expires = System.DateTime.UtcNow.AddDays(2),
+                Expires = System.DateTime.UtcNow.AddDays(3),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
            };
            var token = tokenHandler.CreateToken(tokenDescriptor);

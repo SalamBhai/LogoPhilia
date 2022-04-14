@@ -1,11 +1,5 @@
 var headpage = document.getElementById("asd");
-// var landingcss = document.createElement("link");
-// landingcss.rel = "stylesheet";
-// landingcss.href = "DictionaryLanding.css";
-// landingcss.setAttribute('id', "dland");
-// var resultcss = document.getElementById("dresult");
-// // headpage.removeChild(resultcss);
-// headpage.appendChild(landingcss);
+
 
 var definationsContainer = document.getElementById("DefinationsContainer");
 var searchBox = document.getElementById("searchBox");

@@ -38,8 +38,8 @@ namespace TheLogoPhilia.Controllers
                      foreach (var file in files.Files)
                      {
                           FileInfo fileInfo= new FileInfo(file.FileName);
-                          string userImage = "user" + Guid.NewGuid().ToString().Substring(0,7) + $"{fileInfo.Extension}";
-                          string fullPath= Path.Combine(PhotoDirectory,userImage);
+                          string adminImage = "user" + Guid.NewGuid().ToString().Substring(0,7) + $"{fileInfo.Extension}";
+                          string fullPath= Path.Combine(PhotoDirectory,adminImage);
                           using(var fileStream= new FileStream(fullPath,FileMode.Create))
                           {
                               file.CopyTo(fileStream);
@@ -55,7 +55,7 @@ namespace TheLogoPhilia.Controllers
         }
         [HttpPost("CreateSubAdministrator")]
         [Authorize(Roles ="ApplicationAdministrator")]
-        [Authorize(Roles ="ApplicationSubAdministrator")]
+      
         public async Task<IActionResult> CreateSubAdministrator(CreateSubAdministratorRequestModel model)
         {
           

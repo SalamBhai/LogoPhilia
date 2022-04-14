@@ -25,6 +25,7 @@ namespace TheLogoPhilia.Entities
     
            public ICollection<ApplicationUserAdminMessage> ApplicationUserAdminMessages{get;set;} = new List<ApplicationUserAdminMessage>();
            public ICollection<Notes> ApplicationUserNotes {get;set;}  = new List<Notes>();
+           public bool HasNewsLetterInterest{get;set;}
 
 
     }

@@ -3,7 +3,7 @@
      padding: 0px;
      margin: 0px;
      user-select: none;
- }
+    }
  
  body {
      padding: 0;
@@ -28,7 +28,7 @@
  #navigations {
      background-color: black;
      display: flex;
-     flex-direction: row;
+     
      /* max-height: 2px; */
  }
  
@@ -57,6 +57,7 @@
      margin-bottom: 07vh;
      font-size: 18px;
      padding-bottom: 15px;
+     flex:0 1 40%;
  }
  
  .navitems:hover {
@@ -75,7 +76,7 @@
      animation-timing-function: ease-in-out;
      animation-iteration-count: infinite;
      margin-left: 13px;
-     flex: 0 0 40%;
+     flex: 100;
      margin-bottom: 32px;
      /* border: 1px solid red; */
  }

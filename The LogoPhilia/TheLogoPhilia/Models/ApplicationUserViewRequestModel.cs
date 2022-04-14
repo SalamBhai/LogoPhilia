@@ -20,6 +20,7 @@ namespace TheLogoPhilia.Models
 
         public int Age {get;set;}
         public DateTime DateOfBirth{get;set;}
+        public DateTime DateOfCreation{get;set;}
         public string Country{get;set;}
 
         public ICollection<ApplicationUserCommentViewModel> ApplicationUserComments{get;set;}  = new List<ApplicationUserCommentViewModel>();
@@ -38,6 +39,7 @@ namespace TheLogoPhilia.Models
         public DateTime DateOfBirth{get;set;}
         public string Country{get;set;}
         public string Password{get;set;}
+        public bool HasNewsLetterInterest{get;set;}
     }
     public class ApplicationUserUpdateRequestModel
     {

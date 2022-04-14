@@ -188,7 +188,7 @@ body{
  #home:hover,#sign-out:hover,#hamburger:hover{
      color:blue;
  }
- .fas:hover,.fa-solid:hover{
+ .fas:hover,.fa-solid:hover,.fa:hover{
      color:blue;
      display:block;
      transition : all 0.3s ease;

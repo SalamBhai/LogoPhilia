@@ -71,6 +71,8 @@ namespace TheLogoPhilia.Implementations.Services
                 UserEmail = model.UserEmail,
                 UserId = user.Id,
                 ApplicationUserImage = model.UserImage,
+                DateCreated = DateTime.UtcNow,
+                HasNewsLetterInterest= model.HasNewsLetterInterest
           };
            user.ApplicationUser = applicationUser;
           await _applicationUserRepository.Create(applicationUser);
@@ -116,12 +118,13 @@ namespace TheLogoPhilia.Implementations.Services
                   Country = applicationUser.Country,
                   FullName = $"{applicationUser.FirstName} {applicationUser.LastName}",
                   DateOfBirth = applicationUser.DateOfBirth,
-                     
+                     DateOfCreation = applicationUser.DateCreated,
                      Gender = applicationUser.Gender,
                      UserEmail= user.Email,
                      ApplicationUserImage = applicationUser.ApplicationUserImage,
                      UserName= user.UserName,
                       UserId = applicationUser.UserId,
+
                       ApplicationUserAdminMessages = applicationUser.ApplicationUserAdminMessages.Select(L => new ApplicationUserAdminMessageViewModel
                       {
                            AdministratorMessageId = L.AdministratorMessageId,
