@@ -1,7 +1,9 @@
 using System;
+using System.IO;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using TheLogoPhilia.Entities;
 using TheLogoPhilia.Interfaces.IRepositories;
@@ -15,32 +17,40 @@ namespace TheLogoPhilia.Controllers
     public class ApplicationUserPostController : ControllerBase
     {
         private readonly IApplicationUserPostService _applicationUserPostService;
-         private readonly IPostLogRepository _postLogRepository;
+        private readonly IWebHostEnvironment _webhostEnvironment;
 
-        public ApplicationUserPostController(IApplicationUserPostService applicationUserPostService, IPostLogRepository postLogRepository)
+        public ApplicationUserPostController(IApplicationUserPostService applicationUserPostService, IWebHostEnvironment whe)
         {
             _applicationUserPostService = applicationUserPostService;
-            _postLogRepository = postLogRepository;
+            _webhostEnvironment= whe;
+            
         }
 
         [HttpPost("CreatePost")]
         [Authorize(Roles = "ApplicationUser")]
-        public async Task<IActionResult> CreatePost(CreateApplicationUserPostViewModel model)
+        public async Task<IActionResult> CreatePost([FromForm] CreateApplicationUserPostViewModel model)
         {
+            var files = HttpContext.Request.Form;
+                if(files.Count!=0)
+                {
+                    string VideoDirectory = Path.Combine(_webhostEnvironment.WebRootPath,"VideoPostsFiles");
+                     Directory.CreateDirectory(VideoDirectory);
+                     foreach (var file in files.Files)
+                     {
+                          FileInfo fileInfo= new FileInfo(file.FileName);
+                          string videoFile = "post" +  Guid.NewGuid().ToString().Substring(0,7) + $"{fileInfo.Extension}";
+                          string fullPath= Path.Combine(VideoDirectory,videoFile);
+                          using(var fileStream= new FileStream(fullPath,FileMode.Create))
+                          {
+                              file.CopyTo(fileStream);
+                          }
+                          model.VideoFile = videoFile;
+                     }
+                }
             var UserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
            var post = await _applicationUserPostService.Create(model,UserId);
            if(!post.Success) return BadRequest();
-           if(post.Success)
-           {
-              
-               var postLog = new PostLog
-               {
-                   PostUrl = $"https://localhost:5001/api/ApplicationUserPost/GetPost/{post.Data.PostId}",
-                   ApplicationUserPostId = post.Data.PostId,
-               };
-               
-               await _postLogRepository.Create(postLog);
-           }
+           
            return Ok(post);
         }
         [HttpGet("GetPost/{Id}")]

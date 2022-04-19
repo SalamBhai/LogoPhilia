@@ -9,4 +9,9 @@ namespace TheLogoPhilia.Models
         public string ApplicationUserPostUserName{get;set;}
         public string PostUrl{get;set;}
     }
+     public class CreatePostLogRequestModel
+    {
+       public string PostUrl{get;set;} 
+       public int PostId{get;set;}
+    }
 }

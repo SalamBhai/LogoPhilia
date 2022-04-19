@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -67,6 +69,7 @@ namespace TheLogoPhilia
                services.AddScoped<IAdministratorMessageService,  AdministratorMessageService>();
                services.AddScoped<IAdministratorMessageRepository, AdministratorMessageRepository>();
                services.AddScoped<IPostLogRepository, PostLogRepository>();
+               services.AddScoped<IPostLogService, PostLogService>();
                 services.AddScoped<IApplicationUserAdminMessageRepository,ApplicationUserAdminMessageRepository>();
                 services.AddScoped<IApplicationUserPostRepository, ApplicationUserPostRepository>();
                 services.AddScoped<IApplicationUserPostService, ApplicationUserPostService>();
@@ -99,6 +102,17 @@ namespace TheLogoPhilia
                   ValidateAudience = false,
               };
             });
+
+            services.Configure<KestrelServerOptions>(options =>
+            {
+                options.Limits.MaxRequestBodySize = int.MaxValue; // if don't set default value is: 30 MB
+            });
+            services.Configure<FormOptions>(x =>
+           {
+             x.ValueLengthLimit = int.MaxValue;
+                 x.MultipartBodyLengthLimit = int.MaxValue; // if don't set default value is: 128 MB
+               x.MultipartHeadersLengthLimit = int.MaxValue;
+            });    
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

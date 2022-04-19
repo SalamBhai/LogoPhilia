@@ -1,5 +1,7 @@
     let token= localStorage.getItem('Token');
-    if(token===undefined)
+    console.log("Executing Script...");
+    console.log(token);
+    if(token === null)
     {
-        location.href="/HTML/LoginPageUser.html";
+        location.href="/HTML/User/LoginPageUser.html";
     }

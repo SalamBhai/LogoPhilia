@@ -29,34 +29,15 @@ namespace TheLogoPhilia.Implementations.Services
         public async Task<BaseResponse<ApplicationUserPostViewModel>> Create(CreateApplicationUserPostViewModel model, int UserId)
         {
             var userInPost = await _UserRepository.GetUser(UserId);
-                var videoFile = "";
-           if(model.VideoFile != null)
-            {
-              string wordAudioPath = Path.Combine(_webHostEnvironment.WebRootPath, "AdminImage");
-               Directory.CreateDirectory(wordAudioPath);
-               string videoFileType = model.VideoFile.ContentType.Split('/')[1];
-               videoFile = $"Post/{Guid.NewGuid().ToString().Substring(0,9)}.{videoFileType}";
-                var fullPath = Path.Combine(wordAudioPath,videoFile);
-                if(videoFileType.ToLower() != "mp4" )
-                {
-                  throw new Exception("File Type Not Supported");
-                }
-               
-                else
-                {
-                    using (var fs = new FileStream(fullPath, FileMode.Create))
-                     {
-                     model.VideoFile.CopyTo(fs);
-                   }
-                }  
-            }
+              
            var post = new ApplicationUserPost 
            {
                PostContent = model.PostContent,
                DatePosted = DateTime.UtcNow,
                ApplicationUserId = userInPost.ApplicationUser.Id,
                ApplicationUser = userInPost.ApplicationUser,
-               VideoFile = videoFile,
+               VideoFile = model.VideoFile,
+                 Title= model.Title,   
                 
            };
            await _appUserPostRepository.Create(post);
@@ -73,6 +54,7 @@ namespace TheLogoPhilia.Implementations.Services
                    ApplicationUserId = post.ApplicationUserId,
                    ApplicationUserEmail = post.ApplicationUser.UserEmail,
                    PostId = post.Id,
+                   Title= post.Title, 
                }
            };
         }
@@ -239,6 +221,11 @@ namespace TheLogoPhilia.Implementations.Services
                 ).ToList(),   
                }).ToList()
            };
+        }
+
+        public Task<BaseResponse<ApplicationUserPost>> GetPostsForToday()
+        {
+            throw new NotImplementedException();
         }
     }
 }

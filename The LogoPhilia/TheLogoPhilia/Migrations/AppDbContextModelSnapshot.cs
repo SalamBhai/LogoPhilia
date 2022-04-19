@@ -144,6 +144,9 @@ namespace The_LogoPhilia.Migrations
                     b.Property<int>("Gender")
                         .HasColumnType("int");
 
+                    b.Property<bool>("HasNewsLetterInterest")
+                        .HasColumnType("tinyint(1)");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("tinyint(1)");
 
@@ -237,6 +240,9 @@ namespace The_LogoPhilia.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("PostContent")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Title")
                         .HasColumnType("text");
 
                     b.Property<string>("VideoFile")

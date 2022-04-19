@@ -48,14 +48,14 @@ namespace TheLogoPhilia.Implementations.Repositories
 
         public async Task<IEnumerable<string>> GetUserEmails()
         {
-            var userEmails = await _context.ApplicationUsers.Select(L=> L.UserEmail).ToListAsync();
+            var userEmails = await _context.ApplicationUsers.Where(L=>L.HasNewsLetterInterest==true).Select(L=> L.UserEmail).ToListAsync();
             return userEmails;
         }
 
         public async Task<IEnumerable<ApplicationUser>> GetBirthDayUsers()
         {
             var users = await _context.ApplicationUsers.Include(L=> L.User).ThenInclude(L=> L.UserRoles).Include(L=> L.ApplicationUserAdminMessages).ThenInclude(L=> L.AdministratorMessage).ThenInclude(L=>L.ApplicationUserAdminMessages).ThenInclude(L=>L.ApplicationUser).Include(L=> L.ApplicationUserComments)
-             .Include(L=>  L.ApplicationUserNotes).Include(L=> L.ApplicationUserPosts).Where(L=> L.DateOfBirth.ToShortDateString()== DateTime.UtcNow.ToShortDateString()).ToListAsync();
+             .Include(L=>  L.ApplicationUserNotes).Include(L=> L.ApplicationUserPosts).Where(L=> L.DateOfBirth.ToShortDateString()== DateTime.UtcNow.ToShortDateString() && L.HasNewsLetterInterest==true).ToListAsync();
             return users;
         }
     }

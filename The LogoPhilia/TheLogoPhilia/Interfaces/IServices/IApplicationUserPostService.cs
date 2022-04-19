@@ -12,6 +12,9 @@ namespace TheLogoPhilia.Interfaces.IServices
         Task<BaseResponse<ApplicationUserPostViewModel>> Update(UpdateApplicationUserPostViewModel model, int Id);
         Task<BaseResponse<ApplicationUserPostViewModel>> Get(int Id);
         Task<BaseResponse<IEnumerable<ApplicationUserPostViewModel>>> Get();
+
+        Task<BaseResponse<ApplicationUserPost>> GetPostsForToday();
+
         Task<BaseResponse<IEnumerable<ApplicationUserPostViewModel>>> GetPostsOfUser(int UserId);
         Task<bool> Delete(int Id);
     }

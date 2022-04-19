@@ -33,7 +33,7 @@ namespace TheLogoPhilia.Controllers
            var files = HttpContext.Request.Form;
                 if(files.Count!=0)
                 {
-                    string PhotoDirectory = Path.Combine(_whostEnvironment.ContentRootPath,"AdminImages");
+                    string PhotoDirectory = Path.Combine(_whostEnvironment.WebRootPath,"AdminImages");
                      Directory.CreateDirectory(PhotoDirectory);
                      foreach (var file in files.Files)
                      {

@@ -12,5 +12,6 @@ namespace TheLogoPhilia.Entities
         public DateTime DatePosted{get;set;}
         public ICollection<ApplicationUserComment>ApplicationUserComments{get;set;}
         public PostLog PostLog {get;set;}
+        public string Title{get;set;}
     }
 }

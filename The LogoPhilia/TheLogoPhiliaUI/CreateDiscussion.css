@@ -1,0 +1,117 @@
+*{
+    box-sizing: content-box;
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Roboto Slab',Roboto,serif;
+}
+:root{
+    --White: white;
+    --Black:black;
+    --blue:blue;
+}
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: var(--White);
+}
+.wrapper{
+ 
+    overflow-x: hidden;
+    min-height:96vh;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 10px;
+}
+.discusionNav{
+ display: flex;
+ width: 100%;
+ min-height:12vh;
+ box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+ align-items: center;
+margin-right: 40px;
+ padding: 15px;
+ gap:5px;
+}
+.navItems{
+  flex: 3 3 45%; 
+  font-size: 15px;
+  font-weight: 400;
+
+}
+.DiscussAndIcon{
+    display:flex;
+   gap:5px;
+   padding: 10px;
+}
+.Discuss{
+    font-weight: 700;
+    font-size: 21px;
+    flex:5;
+}
+.Icon{
+    margin-right: 170px;
+    font-size: 21px;
+    color:var(--blue)
+}
+a{
+    text-decoration: none;
+    color:var(--Black)
+}
+.navItems a:hover{
+    border-bottom: 1px solid var(--blue);
+    color:var(--blue);
+    transition: translate all 0.4s ease;
+    padding-bottom: 15px;
+}
+.active{
+    color:var(--blue);
+}
+.form-Container{
+    display:flex;
+    margin-top: 10px;
+    min-height:50vh;
+    justify-content: center;
+    
+    
+}
+.form-Element{
+    width: 40vw;
+    padding: 100px;
+    border-radius:10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.form-Field
+{
+ margin: 10px;
+ margin-bottom: 15px;
+}
+input{
+ border-radius: 5px; 
+ outline: 0; 
+ border:0;
+ border-bottom: 1px solid dodgerblue; 
+ padding: 7px;
+ font-weight: bolder;
+ width:27vw;
+}
+.label{
+    margin: 10px;
+    font-weight: bold;
+}
+textarea{
+    padding:10px;
+    outline: 0;
+}
+.input{
+  outline: var(--White);
+  padding: 10px;
+}
+#submitButton:hover{
+ background-color:var(--blue);
+ font-weight: bold;
+ color:antiquewhite;
+}

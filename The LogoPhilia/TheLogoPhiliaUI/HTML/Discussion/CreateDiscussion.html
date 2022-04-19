@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <title>Create Discussion </title>
+    <!-- <link rel="stylesheet" href="/assets/sweetalert.css"> -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/fa/css/all.css">
+    <link rel="stylesheet" href="/CreateDiscussion.css" type="text/css">
+    <script src="https://kit.fontawesome.com/523d598fb7.js" type="text/javascript" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script src="/Javascript/AppUser/AUTHUser.JS"></script>
+    <div class="wrapper">
+        <nav class="discusionNav">
+           <a href="#CreateDiscussion.html">
+            <div class="navItems discuss">
+                <ul class="DiscussAndIcon">
+                    <li class="Discuss"> Discuss</li>
+                    <li class="Icon"><i class="fa-solid fa-comments"></i></li>
+                </ul>
+            </div>
+           </a>
+           <div class="navItems active">
+              <a href="/HTML/Discussion/CreateDiscussion.html" class="active">Create Discussion</a>
+            </div>
+           <div class="navItems">
+               <a href="/HTML/Discussion/GetAllDiscussions.html">All Discussions</a>
+           </div>
+           
+           <div class="navItems"><a href="/HTML/Discussion/GetDayDiscussion.html"> Today's Discussions</a></div>
+           <div class="navItems"> <a href="/HTML/Discussion/GetUserDiscussions.html"> Your Discussions</a></div>
+        </nav>
+        <div class="form-Container">
+         <form action="" class="form-Element" id="form" enctype="multipart/form-data">
+            <div class="form-Field">
+                <div for="Title" class="label"> Post Title</div>
+                <input type="text" name="title" id="title-Input" class="inputs" required>
+            </div>
+            <div class="form-Field">
+               <div class="label"> Upload Video File?</div>
+               <input type="file" name="videoFile" id="videoFile" class="inputs" value="Upload File">
+            </div>
+            <div class="form-Field">
+                <div for="postContent" class="label"> Post Content</div>
+                <textarea name="postContent" id="postContent" cols="50" rows="10" required class="inputs"></textarea>
+            </div>
+            <input type="submit" value="Create Post" id="submitButton">
+         </form>
+        </div>
+    </div>
+    <script src="/Javascript/Discussion/CreateDiscussion.js"></script>
+</body>
+</html>
