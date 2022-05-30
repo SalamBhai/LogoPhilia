@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Get Post </title>
+    <link rel="stylesheet" href="/GetDiscussionById.css">
+    <link rel="stylesheet" href="/fa/css/all.css">
+    <script src="https://kit.fontawesome.com/523d598fb7.js" type="text/javascript" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body> 
+    <!-- <script src="/Javascript/AppUser/AUTHUser.JS"></script> -->
+    <div class="wrapper">
+        <nav class="discusionNav">
+            <a href="#CreateDiscussion.html">
+             <div class="navItems discuss">
+                 <ul class="DiscussAndIcon">
+                     <li class="Discuss"> <strong>Discuss</strong></li>
+                     <li class="Icon"><i class="fa-solid fa-comments"></i></li>
+                 </ul>
+             </div>
+            </a>
+            <div class="navItems">
+               <a href="#" class="active" id="post-title">Post Title</a>
+             </div>
+            <div class="navItems" id="page">
+                <a href="/HTML/Discussion/GetAllDiscussions.html">All Discussions</a>
+            </div>
+            
+            <div class="navItems"><a href="/HTML/Discussion/GetDayDiscussion.html"> Today's Discussions</a></div>
+            <div class="navItems"> <a href="/HTML/Discussion/GetUserDiscussions.html"> Your Discussions</a></div>
+         </nav>
+
+         <div class="second-content">
+               <div class="creator-and-post">
+                 <div class="creator">
+                     <div class="creator-image">
+                         <div class="holder">
+                             <img src="/assets/myImage.jpg" alt="Creator" class="photo">
+                            </div>
+                     </div>
+                     <div class="creator-name">
+                         <div style="opacity:0.7;font-style: italic;">Author: </div>
+                      <span><i class="fa-solid fa-comments"></i></span><span id="creator"> Saula Sheriffdeen</span>
+                     </div>
+                     <div class="creator-mail">
+                          <span><i class="fa-solid fa-comments"></i></span> <span class="email"> SaulaSheriffdeen@gmail.com </span>
+                     </div>
+                 </div>
+
+                 <div class="post">
+                     <div class="post-content-and-video">
+                        <div class="post-content">
+                            <div class="post-title-and-date">
+                               <div class="post-title">
+                               </div>
+                               <div class="date">
+                                <span class="date-label">Posted On:</span><span class="date-value"> 17:06:2022 </span>
+                                </div>
+                            </div> 
+                             
+                            <div class="content">
+                            </div>
+                        </div>
+                        <div class="video">
+                          <!-- <video src="/assets/How to spell words in Spanish - Basic Spanish.mp4" controls="controls" autoplay id="postVideo"></video> -->
+                        </div>
+                         
+                        <div class="reactions">
+                            <button class="f"><i class="fa-solid fa-comments react-icon" title="like"></i></button>
+                            <button class="s"><i class="fa-solid fa-comments react-icon" title="love"></i></button>
+                            <button class="t"><i class="fa-solid fa-comments react-icon" title="very great"></i></button>
+                           <button class="l"> <i class="fa-solid fa-comments react-icon" title="hunhun"></i></button>
+                        </div>
+
+                        <div class="post-appreciate">
+                            <button class="react">
+                              <i class="fa-solid fa-comments"></i>
+                            </button>
+                            <button class="create-comment">
+                                <a href="#textArea" class="comment-area">Comment</a>
+                            </button>
+                          </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="comment-section"> 
+                <h3 class="heading head">View Opinions</h3>
+                 <div class="comments">
+                 </div>
+                
+                <div class="join-discuss">
+                    <h3 class="heading">Join The Discussion</h3>
+                    <form action="">
+                        <textarea name="comment" id="textArea" cols="30" rows="10" >
+                           
+                        </textarea>
+                        <input type="submit" value="Add Your Comment">
+                    </form>
+                    
+                </div>
+             </div>
+         </div>
+    </div>
+
+    <script src="/Javascript/Discussion/GetDiscussionById.js"></script>
+</body>
+</html>

@@ -11,5 +11,6 @@ namespace TheLogoPhilia.Interfaces.IRepositories
              Task<ApplicationUserPost> GetApplicationUserPost(int id);
         Task<IEnumerable<ApplicationUserPost>> GetAllPosts();  
         Task<IEnumerable<ApplicationUserPost>> GetAllPosts(Expression<Func<ApplicationUserPost, bool>> expression);  
+        Task<IEnumerable<ApplicationUserPost>> GetAllPostsToday();
     }
 }

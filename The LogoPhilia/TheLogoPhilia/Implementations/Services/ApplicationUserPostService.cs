@@ -54,7 +54,8 @@ namespace TheLogoPhilia.Implementations.Services
                    ApplicationUserId = post.ApplicationUserId,
                    ApplicationUserEmail = post.ApplicationUser.UserEmail,
                    PostId = post.Id,
-                   Title= post.Title, 
+                   Title = post.Title, 
+                   CreatorPhoto = post.ApplicationUser.ApplicationUserImage,
                }
            };
         }
@@ -64,8 +65,7 @@ namespace TheLogoPhilia.Implementations.Services
         public async Task<BaseResponse<ApplicationUserPostViewModel>> Get(int Id)
         {
             var appUserPost = await _appUserPostRepository.GetApplicationUserPost(Id);
-            var appUserInPost = await  _appUserRepository.GetUser(appUserPost.ApplicationUserId);
-            var appUser= await _UserRepository.GetUser(appUserInPost.UserId);
+            var appUser= await _UserRepository.GetUser(appUserPost.ApplicationUser.UserId);
             var appUserPostReturned =  new ApplicationUserPostViewModel
             {
                 ApplicationUserId = appUserPost.ApplicationUserId,
@@ -73,9 +73,10 @@ namespace TheLogoPhilia.Implementations.Services
                 ApplicationUserName = appUser.UserName,
                 ApplicationUserEmail = appUserPost.ApplicationUser.UserEmail,
                 PostContent = appUserPost.PostContent,
-                VideoFile = appUserPost.VideoFile,
                 DatePosted = appUserPost.DatePosted,
-
+                 CreatorPhoto = appUserPost.ApplicationUser.ApplicationUserImage,
+                  Title = appUserPost.Title,
+                   VideoFile =  appUserPost.VideoFile  ?? String.Empty,
                 ApplicationUserComments = appUserPost.ApplicationUserComments.Select( L=> new ApplicationUserCommentViewModel
                  {
                    ApplicationUserId = L.ApplicationUserId,
@@ -110,7 +111,9 @@ namespace TheLogoPhilia.Implementations.Services
                 PostContent = appUserPost.PostContent,
                 VideoFile = appUserPost.VideoFile,
                 DatePosted = appUserPost.DatePosted,
-                
+                CreatorPhoto = appUserPost.ApplicationUser.ApplicationUserImage,
+                Title = appUserPost.Title,
+
                 ApplicationUserComments = appUserPost.ApplicationUserComments.Select( L=> new ApplicationUserCommentViewModel
                  {
                    ApplicationUserId = L.ApplicationUserId,
@@ -141,6 +144,7 @@ namespace TheLogoPhilia.Implementations.Services
            Success = false,
           };
           appUserPost.PostContent = model.PostContent;
+          appUserPost.Title = model.PostTitle;
           await _appUserPostRepository.Update(appUserPost);
            return new BaseResponse<ApplicationUserPostViewModel>
            {
@@ -155,7 +159,7 @@ namespace TheLogoPhilia.Implementations.Services
                    PostContent = appUserPost.PostContent,
                    VideoFile = appUserPost.VideoFile,
                     DatePosted = appUserPost.DatePosted,
-                
+                   Title = appUserPost.Title,
                   ApplicationUserComments = appUserPost.ApplicationUserComments.Select( L=> new ApplicationUserCommentViewModel
                  {
                    ApplicationUserId = L.ApplicationUserId,
@@ -206,6 +210,8 @@ namespace TheLogoPhilia.Implementations.Services
                    PostContent = postOfUser.PostContent,
                    VideoFile = postOfUser.VideoFile,
                     DatePosted = postOfUser.DatePosted,
+                    Title = postOfUser.Title,
+                    CreatorPhoto = userinPost.ApplicationUser.ApplicationUserImage,
                 
                   ApplicationUserComments = postOfUser.ApplicationUserComments.Select( L=> new ApplicationUserCommentViewModel
                  {
@@ -223,9 +229,45 @@ namespace TheLogoPhilia.Implementations.Services
            };
         }
 
-        public Task<BaseResponse<ApplicationUserPost>> GetPostsForToday()
+        public async Task<BaseResponse<IEnumerable<ApplicationUserPostViewModel>>> GetPostsForToday()
         {
-            throw new NotImplementedException();
+            var postsToday = await _appUserPostRepository.GetAllPostsToday();
+            if(postsToday == null) return new BaseResponse<IEnumerable<ApplicationUserPostViewModel>>
+          {
+           Message = "Post Not Found",
+           Success = false,
+          };
+        
+          
+           return new  BaseResponse<IEnumerable<ApplicationUserPostViewModel>>
+           {
+               Message = "Today's posts retrieved Successfully",
+               Success =true,
+               Data =  postsToday.Select(post => new ApplicationUserPostViewModel
+               {
+                   ApplicationUserId = post.ApplicationUserId,
+                    PostId = post.Id,
+                    ApplicationUserName = post.ApplicationUser.User.UserName,
+                   VideoFile = post.VideoFile,
+                  ApplicationUserEmail = post.ApplicationUser.UserEmail,
+                    DatePosted = post.DatePosted,
+                       CreatorPhoto = post.ApplicationUser.ApplicationUserImage,
+                  Title = post.Title,
+                   PostContent = post.PostContent,
+                  ApplicationUserComments = post.ApplicationUserComments.Select( L=> new ApplicationUserCommentViewModel
+                 {
+                   ApplicationUserId = L.ApplicationUserId,
+                   ApplicationUserName = L.ApplicationUser.User.UserName,
+                   CommentContent = L.CommentContent,
+                   PostId = L.PostId,
+                   CommentDate = L.CommentDate,
+                   PostCreator = L.Post.ApplicationUser.User.UserName,
+                   PostDate =L.Post.DateCreated,
+                   Id = L.Id,
+                  }
+                ).ToList(),   
+               }).ToList()
+           };
         }
     }
 }

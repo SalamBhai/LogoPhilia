@@ -1,0 +1,21 @@
+<div class="comments">
+                   <div class="comment">
+                      <div class="commenter">
+                        <img src="/assets/myImage.jpg" alt="Creator" srcset="">
+                      </div>
+                      <div class="comment-made">
+                        <div class="first-div">
+                            <div class="info">
+                                <strong>Saula Sheriffdeen </strong> Said:
+                            </div>
+                            <div class="date-commented">
+                               20:05:2022
+                            </div>
+                        </div>
+                        <div class="second-div">
+                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae distinctio doloribus quod magni tempora ducimus obcaecati perferendis labore numquam ex earum nulla odio, nam rerum est officia at consectetur modi.
+                        </div>
+                      </div>
+                   </div>
+</div>
+Yes! I love this contents so very much! I would be craving for more or even start a usual release of these contents Sheriffdeen!

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <title> Get All Discussions </title>
+    <!-- <link rel="stylesheet" href="/assets/sweetalert.css"> -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/fa/css/all.css">
+    <link rel="stylesheet" href="/GetAllDiscussions.css" type="text/css">
+    <script src="https://kit.fontawesome.com/523d598fb7.js" type="text/javascript" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script src="/Javascript/AppUser/AUTHUser.JS"></script>
+    <div class="wrapper">
+        <nav class="discusionNav">
+           <a href="#CreateDiscussion.html">
+            <div class="navItems discuss">
+                <ul class="DiscussAndIcon">
+                    <li class="Discuss"> Discuss</li>
+                    <li class="Icon"><i class="fa-solid fa-comments"></i></li>
+                </ul>
+            </div>
+           </a>
+           <div class="navItems">
+              <a href="/HTML/Discussion/CreateDiscussion.html">Create Discussion</a>
+            </div>
+           <div class="navItems" id="page">
+               <a href="/HTML/Discussion/GetAllDiscussions.html" class="active">All Discussions</a>
+           </div>
+           
+           <div class="navItems"><a href="/HTML/Discussion/GetDayDiscussion.html"> Today's Discussions</a></div>
+           <div class="navItems"> <a href="/HTML/Discussion/GetUserDiscussions.html"> Your Discussions</a></div>
+        </nav>
+        <div class="pagination">
+            <label for="number">Number Of Posts Per Page?</label>
+            <input type="number" class="posts-input" id="posts-input">
+
+        </div>
+        <div class="discussions-container" id="discussions-container">
+          
+        
+        </div>
+        
+    </div>
+    <script src="/Javascript/Discussion/GetAllDiscussion.js"></script>
+</body>

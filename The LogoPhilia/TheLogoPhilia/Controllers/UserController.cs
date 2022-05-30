@@ -26,7 +26,8 @@ namespace TheLogoPhilia.Controllers
             if(!loginRequest.Success) return BadRequest(loginRequest);
             var LoginResponseModel = new LoginResponseModel
             {
-                Name = loginRequest.Data.ApplicationUserFullName,
+
+                Name = loginRequest.Data.UserName,
                 UserRoles = loginRequest.Data.UserRoles.ToList(),
                 Email = loginRequest.Data.Email,
                 Token = _jwtTokenHandler.GenerateToken(loginRequest.Data),
@@ -40,7 +41,7 @@ namespace TheLogoPhilia.Controllers
             if(!loginRequest.Success) return BadRequest(loginRequest);
             var LoginResponseModel = new LoginResponseModel
             {
-                Name = loginRequest.Data.ApplicationUserFullName,
+                Name = loginRequest.Data.UserName,
                 UserRoles = loginRequest.Data.UserRoles.ToList(),
                 Email = loginRequest.Data.Email,
                 Token = _jwtTokenHandler.GenerateToken(loginRequest.Data),

@@ -12,6 +12,7 @@ namespace TheLogoPhilia.Models
         public string ApplicationUserEmail{get;set;}
         public string ApplicationUserName{get;set;}
         public string Title{get;set;}
+        public string CreatorPhoto{get;set;}
         public string PostContent{get;set;}
         public string VideoFile{get;set;}
         public DateTime DatePosted{get;set;}
@@ -29,6 +30,7 @@ namespace TheLogoPhilia.Models
     public class UpdateApplicationUserPostViewModel
     {
         public string PostContent{get;set;}
+        public String PostTitle{get;set;}
     
     }
 }

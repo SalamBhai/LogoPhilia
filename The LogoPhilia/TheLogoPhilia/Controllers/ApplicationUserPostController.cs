@@ -62,7 +62,7 @@ namespace TheLogoPhilia.Controllers
            return Ok(post);
         }
         [HttpGet("GetAllPosts")]
-        // [Authorize(Roles = "ApplicationUser")]
+   
         public async Task<IActionResult> GetAllPosts()
         {
            var post = await _applicationUserPostService.Get();
@@ -85,6 +85,15 @@ namespace TheLogoPhilia.Controllers
            var post = await _applicationUserPostService.GetPostsOfUser(id);
            if(!post.Success) return BadRequest();
            return Ok(post);
+        }
+
+        [HttpDelete("DeletePostOfLoggedInUser/{Id}")]
+        [Authorize(Roles = "ApplicationUser")]
+        public async Task<IActionResult> DeletePost(int id)
+        {
+          var deletion = await _applicationUserPostService.Delete(id);
+          if(!deletion) return BadRequest();
+          return Ok(deletion);
         }
     }
 }

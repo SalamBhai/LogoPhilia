@@ -85,6 +85,7 @@ namespace TheLogoPhilia.Controllers
                 }
              return Ok(response);
             }
+            
         [HttpDelete("DeleteApplicationUser/{Id}")]
          public async Task<IActionResult> DeleteApplicationUsers(int Id)
          {

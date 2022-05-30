@@ -19,7 +19,7 @@ namespace TheLogoPhilia.Implementations.Repositories
 
         public async Task<IEnumerable<ApplicationUserPost>> GetAllPosts()
         {
-          return await _context.ApplicationUserPosts.Include(L=> L.ApplicationUser).ThenInclude(L=> L.User).Include(L=> L.ApplicationUserComments).Include(L=> L.PostLog).ToListAsync();
+          return await _context.ApplicationUserPosts.Include(L=> L.ApplicationUser).ThenInclude(L=> L.User).Include(L=> L.ApplicationUserComments).Include(L => L.PostLog).Where(L => L.IsDeleted == false).ToListAsync();
         }
 
         public async Task<IEnumerable<ApplicationUserPost>> GetAllPosts(Expression<Func<ApplicationUserPost, bool>> expression)
@@ -27,9 +27,14 @@ namespace TheLogoPhilia.Implementations.Repositories
            return await _context.ApplicationUserPosts.Include(L=> L.ApplicationUser).ThenInclude(L=> L.User).Include(L=> L.ApplicationUserComments).Include(L=> L.PostLog).Where(expression).ToListAsync();
         }
 
+        public async  Task<IEnumerable<ApplicationUserPost>> GetAllPostsToday()
+        {
+         return await _context.ApplicationUserPosts.Include(L=> L.ApplicationUser).ThenInclude(L=>L.User).Include(L=> L.ApplicationUserComments).Include(L=> L.PostLog).Where(L=> L.DatePosted.ToShortDateString() == DateTime.UtcNow.ToShortDateString() && L.IsDeleted == false).ToListAsync();
+        }
+
         public async Task<ApplicationUserPost> GetApplicationUserPost(int id)
         {
-          return await _context.ApplicationUserPosts.Include(L=> L.ApplicationUser).ThenInclude(L=>L.User).Include(L=> L.ApplicationUserComments).Include(L=> L.PostLog).SingleOrDefaultAsync(L=> L.Id ==id);
+          return await _context.ApplicationUserPosts.Include(L=> L.ApplicationUser).ThenInclude(L=>L.User).Include(L=> L.ApplicationUserComments).Include(L=> L.PostLog).SingleOrDefaultAsync(L=> L.Id == id && L.IsDeleted == false);
         }
     }
 }
