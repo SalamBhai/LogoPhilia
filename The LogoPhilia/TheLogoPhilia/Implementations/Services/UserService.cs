@@ -89,7 +89,7 @@ namespace TheLogoPhilia.Implementations.Services
         public async Task<BaseResponse<UserViewModel>> LoginApplicationAdministrator(LoginAdministratorRequestModel model)
         {
             var appAdministrator = await _userRepository.GetUser(L=> L.Email == model.Email || L.UserName==model.UserName);
-            if(appAdministrator == null && (BCrypt.Net.BCrypt.Verify(model.Password,appAdministrator.Password)) != true && appAdministrator.ApplicationAdministrator.AdministratorCode!= model.AdministratorCode) return new BaseResponse<UserViewModel>
+            if(appAdministrator == null || (BCrypt.Net.BCrypt.Verify(model.Password,appAdministrator.Password)) != true && appAdministrator.ApplicationAdministrator.AdministratorCode!= model.AdministratorCode) return new BaseResponse<UserViewModel>
             {
                 Message = "Login Unsuccessful Because Of Invalid LogIn Credentials",
                 Success = false,
@@ -117,17 +117,20 @@ namespace TheLogoPhilia.Implementations.Services
 
         public async Task<BaseResponse<UserViewModel>> LoginApplicationUser(LoginUserRequestModel model)
         {
-            var applicationUser = await _userRepository.GetUser(L=> L.Email == model.Email || L.UserName == model.UserName && L.IsDeleted == false);
-              if(applicationUser == null  && (BCrypt.Net.BCrypt.Verify(model.Password, applicationUser.Password)) != true) return new BaseResponse<UserViewModel>
+            
+               var applicationUser = await _userRepository.GetUser(L=> L.Email == model.Email || L.UserName == model.UserName && L.IsDeleted == false);
+              if(applicationUser == null  || (BCrypt.Net.BCrypt.Verify(model.Password, applicationUser.Password)) != true) return new BaseResponse<UserViewModel>
               {
                 Message = " Login Failed! Invalid Log In Credentials",
                 Success = false,
               };
+        
+
               
               return new BaseResponse<UserViewModel>
               {
                  Message = "LogIn Succesful!",
-                 Success =true,
+                 Success = true,
                  Data = new UserViewModel
                  {
                    ApplicationUserFullName = applicationUser.UserName,

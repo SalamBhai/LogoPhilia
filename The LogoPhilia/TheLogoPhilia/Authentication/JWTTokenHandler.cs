@@ -31,7 +31,7 @@ namespace TheLogoPhilia.Authentication
            var key = Encoding.ASCII.GetBytes(Key);
            var tokenDescriptor = new SecurityTokenDescriptor
            {
-               Subject = new ClaimsIdentity(Claims),
+                Subject = new ClaimsIdentity(Claims),
                 IssuedAt = System.DateTime.UtcNow,
                 Expires = System.DateTime.UtcNow.AddHours(3),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)

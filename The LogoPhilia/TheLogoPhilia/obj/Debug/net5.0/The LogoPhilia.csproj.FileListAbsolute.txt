@@ -121,7 +121,6 @@ C:\Users\user\Boss\The LogoPhilia\TheLogoPhilia\bin\Debug\net5.0\The LogoPhilia.
 C:\Users\user\Boss\The LogoPhilia\TheLogoPhilia\bin\Debug\net5.0\The LogoPhilia.runtimeconfig.json
 C:\Users\user\Boss\The LogoPhilia\TheLogoPhilia\bin\Debug\net5.0\The LogoPhilia.runtimeconfig.dev.json
 C:\Users\user\Boss\The LogoPhilia\TheLogoPhilia\bin\Debug\net5.0\The LogoPhilia.dll
-C:\Users\user\Boss\The LogoPhilia\TheLogoPhilia\bin\Debug\net5.0\ref\The LogoPhilia.dll
 C:\Users\user\Boss\The LogoPhilia\TheLogoPhilia\bin\Debug\net5.0\The LogoPhilia.pdb
 C:\Users\user\Boss\The LogoPhilia\TheLogoPhilia\bin\Debug\net5.0\BCrypt.Net-Next.dll
 C:\Users\user\Boss\The LogoPhilia\TheLogoPhilia\bin\Debug\net5.0\Google.Protobuf.dll
@@ -164,7 +163,6 @@ C:\Users\user\Boss\The LogoPhilia\TheLogoPhilia\obj\Debug\net5.0\The LogoPhilia.
 C:\Users\user\Boss\The LogoPhilia\TheLogoPhilia\obj\Debug\net5.0\The LogoPhilia.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\user\Boss\The LogoPhilia\TheLogoPhilia\obj\Debug\net5.0\The LogoPhilia.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\user\Boss\The LogoPhilia\TheLogoPhilia\obj\Debug\net5.0\staticwebassets\The LogoPhilia.StaticWebAssets.Manifest.cache
-C:\Users\user\Boss\The LogoPhilia\TheLogoPhilia\obj\Debug\net5.0\staticwebassets\The LogoPhilia.StaticWebAssets.xml
 C:\Users\user\Boss\The LogoPhilia\TheLogoPhilia\obj\Debug\net5.0\scopedcss\bundle\The LogoPhilia.styles.css
 C:\Users\user\Boss\The LogoPhilia\TheLogoPhilia\obj\Debug\net5.0\The LogoPhilia.RazorTargetAssemblyInfo.cache
 C:\Users\user\Boss\The LogoPhilia\TheLogoPhilia\obj\Debug\net5.0\The LogoPhilia.csproj.CopyComplete
@@ -172,3 +170,4 @@ C:\Users\user\Boss\The LogoPhilia\TheLogoPhilia\obj\Debug\net5.0\The LogoPhilia.
 C:\Users\user\Boss\The LogoPhilia\TheLogoPhilia\obj\Debug\net5.0\ref\The LogoPhilia.dll
 C:\Users\user\Boss\The LogoPhilia\TheLogoPhilia\obj\Debug\net5.0\The LogoPhilia.pdb
 C:\Users\user\Boss\The LogoPhilia\TheLogoPhilia\obj\Debug\net5.0\The LogoPhilia.genruntimeconfig.cache
+C:\Users\user\Boss\The LogoPhilia\TheLogoPhilia\obj\Debug\net5.0\refint\The LogoPhilia.dll

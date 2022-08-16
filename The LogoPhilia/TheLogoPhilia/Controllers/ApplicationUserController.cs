@@ -27,16 +27,16 @@ namespace TheLogoPhilia.Controllers
           public async Task<IActionResult> CreateApplicationUser([FromForm] ApplicationUserCreateRequestModel model)
             {
                 var files = HttpContext.Request.Form;
-                if(files.Count!=0)
+                if(files.Count != 0)
                 {
-                    string PhotoDirectory = Path.Combine(_webhostEnvironment.ContentRootPath,"UserImages");
+                    string PhotoDirectory = Path.Combine(_webhostEnvironment.WebRootPath,"UserImages");
                      Directory.CreateDirectory(PhotoDirectory);
                      foreach (var file in files.Files)
                      {
-                          FileInfo fileInfo= new FileInfo(file.FileName);
+                          FileInfo fileInfo = new FileInfo(file.FileName);
                           string userImage = "user" + Guid.NewGuid().ToString().Substring(0,7) + $"{fileInfo.Extension}";
                           string fullPath= Path.Combine(PhotoDirectory,userImage);
-                          using(var fileStream= new FileStream(fullPath,FileMode.Create))
+                          using(var fileStream = new FileStream(fullPath,FileMode.Create))
                           {
                               file.CopyTo(fileStream);
                           }

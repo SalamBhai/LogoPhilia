@@ -126,7 +126,7 @@ namespace TheLogoPhilia
             }
 
             app.UseHttpsRedirection();
-
+            app.UseStaticFiles();
             app.UseRouting();
             app.UseCors("THELOGOPHILIA");
             app.UseAuthentication();

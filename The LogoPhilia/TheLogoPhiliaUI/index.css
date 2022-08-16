@@ -45,7 +45,7 @@
         bottom: -330px;
         right: -400px;
         animation-name: movetext;
-        animation-duration: 3s;
+        animation-duration: 4s;
     }
     @keyframes changeColor {
         from {
